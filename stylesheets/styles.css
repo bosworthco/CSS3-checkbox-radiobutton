@@ -7,6 +7,10 @@ body {
   font-weight:300;
 }
 
+#controller .hue-field {
+  width: 13px!important;
+}
+
 .formRow {
   margin: 15px 0;
 }

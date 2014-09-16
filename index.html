@@ -208,13 +208,12 @@
           var swInput = sw.find('input');
           var swBtn = sw.find('.label');
 
-          var colours = "";
-          
-          colours+="@switch_bg:"+customSwitch.background;
-          colours+="\r@inactive_color:"+customSwitch.inactiveBG;
-          colours+="\r@inactive_border:"+customSwitch.inactiveBorder;
-          colours+="\r@active_color:"+customSwitch.activeBG;
-          colours+="\r@active_border:"+customSwitch.activeBorder;
+          var LESSvars = "";
+          LESSvars+="@switch_bg:"+customSwitch.background;
+          LESSvars+="\r@inactive_color:"+customSwitch.inactiveBG;
+          LESSvars+="\r@inactive_border:"+customSwitch.inactiveBorder;
+          LESSvars+="\r@active_color:"+customSwitch.activeBG;
+          LESSvars+="\r@active_border:"+customSwitch.activeBorder;
 
           if(sw.hasClass('radio') || sw.hasClass('checkbox')) {
             sw.removeClass('checkbox radio');
@@ -235,13 +234,12 @@
 
           var codeDiv = $(".js-codecopy")[0];
           var switchHTML = $(".js-innerhtml")[0];
-          var switchCSS = $(".js-csscopy")[0];
-
           var code = switchHTML.innerHTML;
           codeDiv.value = code;
 
-          switchCSS.value = colours;
-          //console.log(switchHTML.innerHTML);
+          var CSSdiv = $(".js-csscopy")[0];
+          CSSdiv.value = LESSvars;
+
         };
 
         setInterval( update, 500 );
