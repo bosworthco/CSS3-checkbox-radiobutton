@@ -29,6 +29,10 @@ pre,
   margin-bottom: 60px;
 }
 
+.js-innerhtml {
+  margin-bottom: 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin:0 0 20px;
 }
@@ -163,6 +167,7 @@ section {
   float:right;
   padding: 15px 20px;
   border-radius: 5px;
+  margin-bottom: 50px;
   background: #1D1E19;
   color: #FFFFFF;
 }
