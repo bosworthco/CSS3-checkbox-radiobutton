@@ -231,6 +231,16 @@
 
           sw.attr('data-style', customSwitch.type);
           sw.attr('data-label', customSwitch.label);
+          swEL.style.background=customSwitch.background;
+          //swLabelActive[0].style.color=customSwitch.activeBG;
+    
+          if(swInput.prop('checked') == true) {
+            swBtn[0].style.background=customSwitch.activeBG;
+            swBtn[0].style.borderColor=customSwitch.activeBorder;
+          } else {
+            swBtn[0].style.background=customSwitch.inactiveBG;
+            swBtn[0].style.borderColor=customSwitch.inactiveBorder;
+          }
 
           var codeDiv = $(".js-codecopy")[0];
           var switchHTML = $(".js-innerhtml")[0];
