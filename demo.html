@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Custom CSS3 Checkboxes &amp; Radiobuttons, completely JS free by bosworthco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet/less" type="text/css" href="less/switches.less" />
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div id="checkboxes">
+    <h1>Checkboxes</h1>
+
+    <div class="formRow">
+      <pre>data-style="rounded" data-label="yes-no"</pre>
+      <div class="js-switch checkbox" data-style="rounded" data-label="yes-no">
+        <input type="checkbox" id="cb-1">
+        <label class="label" for="cb-1"></label>
+      </div>
+      <div class="js-switch checkbox" data-style="rounded" data-label="yes-no">
+        <input type="checkbox" id="cb-2">
+        <label class="label" for="cb-2"></label>
+      </div>
+      <div class="js-switch checkbox" data-style="rounded" data-label="yes-no">
+        <input type="checkbox" id="cb-3">
+        <label class="label" for="cb-3"></label>
+      </div>
+    </div>
+
+    <div class="formRow">
+      <pre>data-style="square" data-label="O-I"</pre>
+      <div class="js-switch checkbox" data-style="square" data-label="O-I">
+        <input type="checkbox" id="cb-4">
+        <label class="label" for="cb-4"></label>
+      </div>
+      <div class="js-switch checkbox" data-style="square" data-label="O-I">
+        <input type="checkbox" id="cb-5">
+        <label class="label" for="cb-5"></label>
+      </div>
+      <div class="js-switch checkbox" data-style="square" data-label="O-I">
+        <input type="checkbox" id="cb-6">
+        <label class="label" for="cb-6"></label>
+      </div>
+    </div>
+
+    <div class="formRow">
+      <pre>data-style="slider" (no labels buy default)</pre>
+      <div class="js-switch checkbox" data-style="slider">
+        <input type="checkbox" id="cb-7">
+        <label class="label" for="cb-7"></label>
+      </div>
+      <div class="js-switch checkbox" data-style="slider">
+        <input type="checkbox" id="cb-8">
+        <label class="label" for="cb-8"></label>
+      </div>
+      <div class="js-switch checkbox" data-style="slider">
+        <input type="checkbox" id="cb-9">
+        <label class="label" for="cb-9"></label>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="radiobuttons">
+    <h1>Radiobuttons</h1>
+
+    <div class="formRow">
+      <pre>data-style="rounded" data-label="none"</pre>
+      <div class="js-switch radio" data-style="rounded" data-label="none">
+        <input type="radio" id="rb-1" name="rb-group-1">
+        <label class="label" for="rb-1"></label>
+      </div>
+      <div class="js-switch radio" data-style="rounded" data-label="none">
+        <input type="radio" id="rb-2" name="rb-group-1">
+        <label class="label" for="rb-2"></label>
+      </div>
+      <div class="js-switch radio" data-style="rounded" data-label="none">
+        <input type="radio" id="rb-3" name="rb-group-1">
+        <label class="label" for="rb-3"></label>
+      </div>
+    </div>
+
+    <div class="formRow">
+      <pre>data-style="square" data-label="on-off"</pre>
+      <div class="js-switch radio" data-style="square" data-label="on-off">
+        <input type="radio" id="rb-4" name="rb-group-2">
+        <label class="label" for="rb-4"></label>
+      </div>
+      <div class="js-switch radio" data-style="square" data-label="on-off">
+        <input type="radio" id="rb-5" name="rb-group-2">
+        <label class="label" for="rb-5"></label>
+      </div>
+      <div class="js-switch radio" data-style="square" data-label="on-off">
+        <input type="radio" id="rb-6" name="rb-group-2">
+        <label class="label" for="rb-6"></label>
+      </div>
+    </div>
+
+    <div class="formRow">
+      <pre>data-style="rounded" (no labels buy default)</pre>
+      <div class="js-switch radio" data-style="slider" data-label="none">
+        <input type="radio" id="rb-7" name="rb-group-3">
+        <label class="label" for="rb-7"></label>
+      </div>
+      <div class="js-switch radio" data-style="slider" data-label="none">
+        <input type="radio" id="rb-8" name="rb-group-3">
+        <label class="label" for="rb-8"></label>
+      </div>
+      <div class="js-switch radio" data-style="slider" data-label="none">
+        <input type="radio" id="rb-9" name="rb-group-3">
+        <label class="label" for="rb-9"></label>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+</html>
