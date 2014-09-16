@@ -7,6 +7,28 @@ body {
   font-weight:300;
 }
 
+.formRow {
+  margin: 15px 0;
+}
+
+pre,
+.js-codecopy,
+.js-csscopy {
+  background: #333;
+  border:none;
+  padding: 3px 5px;
+  color: #CCC;
+  border-radius: 3px;
+  margin-top: 20px;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospaced;
+}
+
+#checkboxes,
+#radiobuttons,
+#preview {
+  margin-bottom: 60px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin:0 0 20px;
 }
@@ -46,20 +68,6 @@ blockquote {
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
-}
-
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:12px;
-}
-
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;  
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
 }
 
 table {
