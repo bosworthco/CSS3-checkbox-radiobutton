@@ -137,6 +137,14 @@
         <div id="preview">
           <h2>Switch Generator</h2>
           <div id="controller"></div>
+
+<div class="js-preview">
+<div class="js-switch radio" data-style="slider" data-label="none">
+  <input type="radio" id="rb-demo-1" name="rb-group">
+  <label class="label" for="rb-demo-1"></label>
+</div>
+</div>
+
 <div class="js-innerhtml">
 <div class="js-switch radio" data-style="slider" data-label="none">
   <input type="radio" id="rb-demo-1" name="rb-group">
@@ -203,10 +211,17 @@
 
         var update = function() {
 
-          var sw = $('#preview .js-switch');
+          var sw = $('#preview .js-innerhtml .js-switch');
           var swEL = sw[0];
           var swInput = sw.find('input');
           var swBtn = sw.find('.label');
+
+
+          var c_sw = $('#preview .js-preview .js-switch');
+          var c_swEL = c_sw[0];
+          var c_swInput = c_sw.find('input');
+          var c_swBtn = c_sw.find('.label');
+
 
           var LESSvars = "";
           LESSvars+="@switch_bg:"+customSwitch.background;
@@ -215,31 +230,48 @@
           LESSvars+="\r@active_color:"+customSwitch.activeBG;
           LESSvars+="\r@active_border:"+customSwitch.activeBorder;
 
+
           if(sw.hasClass('radio') || sw.hasClass('checkbox')) {
             sw.removeClass('checkbox radio');
             sw.addClass(customSwitch.element);
             swInput.attr('type', customSwitch.element);
+
+            c_sw.removeClass('checkbox radio');
+            c_sw.addClass(customSwitch.element);
+            c_swInput.attr('type', customSwitch.element);
           }
+
 
           if(sw.hasClass('checkbox')) {
             swInput.removeAttr('name').attr('id', 'cb-demo');
             swBtn.attr('for', 'cb-demo');
+
+            c_swInput.removeAttr('name').attr('id', 'cb-demo');
+            c_swBtn.attr('for', 'cb-demo');
           } else {
             swInput.attr('name', 'rb-group').attr('id', 'rb-demo');
             swBtn.attr('for', 'rb-demo');
+
+            c_swInput.attr('name', 'rb-group').attr('id', 'rb-demo');
+            c_swBtn.attr('for', 'rb-demo');
           }
+
 
           sw.attr('data-style', customSwitch.type);
           sw.attr('data-label', customSwitch.label);
-          swEL.style.background=customSwitch.background;
+
+          c_sw.attr('data-style', customSwitch.type);
+          c_sw.attr('data-label', customSwitch.label);
+
+          c_swEL.style.background=customSwitch.background;
           //swLabelActive[0].style.color=customSwitch.activeBG;
     
-          if(swInput.prop('checked') == true) {
-            swBtn[0].style.background=customSwitch.activeBG;
-            swBtn[0].style.borderColor=customSwitch.activeBorder;
+          if(c_swInput.prop('checked') == true) {
+            c_swBtn[0].style.background=customSwitch.activeBG;
+            c_swBtn[0].style.borderColor=customSwitch.activeBorder;
           } else {
-            swBtn[0].style.background=customSwitch.inactiveBG;
-            swBtn[0].style.borderColor=customSwitch.inactiveBorder;
+            c_swBtn[0].style.background=customSwitch.inactiveBG;
+            c_swBtn[0].style.borderColor=customSwitch.inactiveBorder;
           }
 
           var codeDiv = $(".js-codecopy")[0];
