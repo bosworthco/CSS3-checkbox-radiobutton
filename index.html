@@ -174,14 +174,19 @@
         this.element = 'checkbox';
         this.type = 'rounded';
         this.label = 'none';
+        this.background = '#DEDEDE';
+        this.inactiveBG = '#555555';
+        this.inactiveBorder = '#454545';
+        this.activeBG = '#2D964A';
+        this.activeBorder = '#268238';
       };
 
       window.onload = function() {
 
         var customSwitch = new customSwitches();
-
         var gui = new dat.GUI({ autoPlace: false });
         var customContainer = $('#controller');
+
         customContainer.append(gui.domElement);
 
         gui.add(customSwitch, 'element', ['checkbox','radio'] );
@@ -226,9 +231,7 @@
 
           var CSSdiv = $(".js-csscopy")[0];
           CSSdiv.value = LESSvars;
-
         };
-
         setInterval( update, 500 );
       };
     });
