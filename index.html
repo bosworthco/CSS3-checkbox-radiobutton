@@ -184,17 +184,9 @@
         var customContainer = $('#controller');
         customContainer.append(gui.domElement);
 
-        var f1 = gui.addFolder('Input Type');
-          f1.add(customSwitch, 'element', ['checkbox','radio'] );
-          f1.add(customSwitch, 'type', ['rounded','square','slider'] );
-          f1.add(customSwitch, 'label', ['none','yes-no','on-off','O-I'] );
-
-        var f2 = gui.addFolder('Colors');
-          f2.addColor(customSwitch, 'background');
-          f2.addColor(customSwitch, 'inactiveBG');
-          f2.addColor(customSwitch, 'inactiveBorder');
-          f2.addColor(customSwitch, 'activeBG');
-          f2.addColor(customSwitch, 'activeBorder');
+        gui.add(customSwitch, 'element', ['checkbox','radio'] );
+        gui.add(customSwitch, 'type', ['rounded','square','slider'] );
+        gui.add(customSwitch, 'label', ['none','yes-no','on-off','O-I'] );
 
         var update = function() {
 
