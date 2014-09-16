@@ -174,6 +174,11 @@
         this.element = 'checkbox';
         this.type = 'rounded';
         this.label = 'none';
+        this.background = '#DEDEDE';
+        this.inactiveBG = '#555555';
+        this.inactiveBorder = '#454545';
+        this.activeBG = '#2D964A';
+        this.activeBorder = '#268238';
       };
 
       window.onload = function() {
@@ -184,9 +189,17 @@
         var customContainer = $('#controller');
         customContainer.append(gui.domElement);
 
-        gui.add(customSwitch, 'element', ['checkbox','radio'] );
-        gui.add(customSwitch, 'type', ['rounded','square','slider'] );
-        gui.add(customSwitch, 'label', ['none','yes-no','on-off','O-I'] );
+        var f1 = gui.addFolder('Input Type');
+          f1.add(customSwitch, 'element', ['checkbox','radio'] );
+          f1.add(customSwitch, 'type', ['rounded','square','slider'] );
+          f1.add(customSwitch, 'label', ['none','yes-no','on-off','O-I'] );
+
+        var f2 = gui.addFolder('Colors');
+          f2.addColor(customSwitch, 'background');
+          f2.addColor(customSwitch, 'inactiveBG');
+          f2.addColor(customSwitch, 'inactiveBorder');
+          f2.addColor(customSwitch, 'activeBG');
+          f2.addColor(customSwitch, 'activeBorder');
 
         var update = function() {
 
@@ -194,6 +207,14 @@
           var swEL = sw[0];
           var swInput = sw.find('input');
           var swBtn = sw.find('.label');
+
+          var colours = "";
+          
+          colours+="@switch_bg:"+customSwitch.background;
+          colours+="\r@inactive_color:"+customSwitch.inactiveBG;
+          colours+="\r@inactive_border:"+customSwitch.inactiveBorder;
+          colours+="\r@active_color:"+customSwitch.activeBG;
+          colours+="\r@active_border:"+customSwitch.activeBorder;
 
           if(sw.hasClass('radio') || sw.hasClass('checkbox')) {
             sw.removeClass('checkbox radio');
@@ -214,10 +235,13 @@
 
           var codeDiv = $(".js-codecopy")[0];
           var switchHTML = $(".js-innerhtml")[0];
-          var code = switchHTML.innerHTML;
+          var switchCSS = $(".js-csscopy")[0];
 
+          var code = switchHTML.innerHTML;
           codeDiv.value = code;
-          console.log(switchHTML.innerHTML);
+
+          switchCSS.value = colours;
+          //console.log(switchHTML.innerHTML);
         };
 
         setInterval( update, 500 );
