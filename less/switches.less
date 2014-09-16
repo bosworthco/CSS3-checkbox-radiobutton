@@ -1,0 +1,202 @@
+/* VARIABLES
+===================================================== */
+@import "colors.less";
+
+.layer(@index: 1) {
+  z-index: @index;
+}
+
+
+/* MAIN LAYOUT (unrelated to checkboxes/radiobuttons)
+===================================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* BASIC SWITCH STYLES (more control gained from modifiers)
+===================================================== */
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.checkbox,
+.radio {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  box-shadow: 0 1px 2px #000, inset 0 1px 0 rgba(255,255,255,.25);
+  background: @switch_bg;
+  .layer(1);
+}
+
+
+/* BASIC LABEL STYLES (more control from modifiers)
+===================================================== */
+.checkbox:before, .radio:before,
+.checkbox:after, .radio:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+  .layer(2);
+}
+.checkbox:before,
+.radio:before {
+	left: 0;
+	color: @active_color;
+}
+.checkbox:after,
+.radio:after {
+	right: 0;
+	color: @inactive_color;
+}
+
+/* SWITCH STATE (off)
+===================================================== */
+.checkbox label,
+.radio label {
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 28px;
+  top: 1px;
+	left: 1px;
+	background: @inactive_color;
+	border: 1px solid @inactive_color;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.15);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+  .layer(3);
+}
+
+
+/* SWITCH STATE (on)
+===================================================== */
+.checkbox input[type='checkbox']:checked + label,
+.radio input[type='radio']:checked + label {
+	background: @active_color;
+	border-color: @active_border;
+	transform: translate3d(38px,0,0);
+}
+
+
+
+/* STYLE: SLIDER (modified styles)
+===================================================== */
+.checkbox[data-style='slider'],
+.radio[data-style='slider'] {
+	height: 10px;
+	line-height: 10px;
+	border-radius: 10px;
+  
+  label {
+    width: 28px;
+	  margin-top: -14px;
+	  top: 50%;
+	  left: 5px;
+	  border-radius: 30px;
+  }
+  
+  input[type='checkbox']:checked + label,
+  input[type='radio']:checked + label {
+    transform: translate3d(42px,0,0);
+  }
+}
+
+
+/* STYLE: ROUNDED (modified styles)
+===================================================== */
+.checkbox[data-style='rounded'],
+.checkbox[data-style='rounded'] label,
+.radio[data-style='rounded'],
+.radio[data-style='rounded'] label {
+	border-radius: 30px;
+}
+
+
+
+/* STYLE: SQUARE (modified styles)
+===================================================== */
+.checkbox[data-style='square'],
+.checkbox[data-style='square'] label,
+.radio[data-style='square'] label,
+.radio[data-style='square'] {
+	border-radius: 3px;
+}
+
+
+/* LABEL STYLE: O-I (modified styles)
+===================================================== */
+.checkbox[data-label='O-I'],
+.radio[data-label='O-I'] {
+  &:before {
+    content: 'O';
+  }
+  &:after {
+    content: 'I';
+  }	
+}
+
+
+/* LABEL STYLE: on-off (modified styles)
+===================================================== */
+.checkbox[data-label='on-off'],
+.radio[data-label='on-off'] {
+  &:before {
+    content: 'on';
+  }
+  &:after {
+    content: 'off';
+  }	
+}
+
+
+
+/* LABEL STYLE: yes-no (modified styles)
+===================================================== */
+.checkbox[data-label='yes-no'],
+.radio[data-label='yes-no'] {
+  &:before {
+    content: 'yes';
+  }
+  &:after {
+    content: 'no';
+  }
+}
+
+
+
+/* LABEL STYLE: none (modified styles)
+===================================================== */
+.checkbox[data-style='slider'],
+.checkbox[data-style='slider'],
+.checkbox[data-label='none'],
+.checkbox[data-label='none'],
+.radio[data-style='slider'],
+.radio[data-style='slider'],
+.radio[data-label='none'],
+.radio[data-label='none'] {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
