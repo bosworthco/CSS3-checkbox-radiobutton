@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Css3-checkbox-radiobutton by bosworthco</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Custom CSS3 Checkboxes &amp; Radiobuttons, completely JS free by bosworthco</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet/less" type="text/css" href="stylesheets/styles.less" />
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet/less" type="text/css" href="stylesheets/styles.less" />
 
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -30,7 +30,116 @@
           <li><a href="https://github.com/bosworthco/CSS3-checkbox-radiobutton/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/bosworthco/CSS3-checkbox-radiobutton">View On <strong>GitHub</strong></a></li>
         </ul>
-        <hr/>
+        
+      </header>
+      
+      <section>
+        <div id="checkboxes">
+          <h1>Checkboxes</h1>
+
+          <div class="formRow">
+            <pre>data-style="rounded" data-label="yes-no"</pre>
+            <div class="js-switch checkbox" data-style="rounded" data-label="yes-no">
+              <input type="checkbox" id="cb-1">
+              <label class="label" for="cb-1"></label>
+            </div>
+            <div class="js-switch checkbox" data-style="rounded" data-label="yes-no">
+              <input type="checkbox" id="cb-2">
+              <label class="label" for="cb-2"></label>
+            </div>
+            <div class="js-switch checkbox" data-style="rounded" data-label="yes-no">
+              <input type="checkbox" id="cb-3">
+              <label class="label" for="cb-3"></label>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <pre>data-style="square" data-label="O-I"</pre>
+            <div class="js-switch checkbox" data-style="square" data-label="O-I">
+              <input type="checkbox" id="cb-4">
+              <label class="label" for="cb-4"></label>
+            </div>
+            <div class="js-switch checkbox" data-style="square" data-label="O-I">
+              <input type="checkbox" id="cb-5">
+              <label class="label" for="cb-5"></label>
+            </div>
+            <div class="js-switch checkbox" data-style="square" data-label="O-I">
+              <input type="checkbox" id="cb-6">
+              <label class="label" for="cb-6"></label>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <pre>data-style="slider" (no labels buy default)</pre>
+            <div class="js-switch checkbox" data-style="slider">
+              <input type="checkbox" id="cb-7">
+              <label class="label" for="cb-7"></label>
+            </div>
+            <div class="js-switch checkbox" data-style="slider">
+              <input type="checkbox" id="cb-8">
+              <label class="label" for="cb-8"></label>
+            </div>
+            <div class="js-switch checkbox" data-style="slider">
+              <input type="checkbox" id="cb-9">
+              <label class="label" for="cb-9"></label>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div id="radiobuttons">
+          <h1>Radiobuttons</h1>
+
+          <div class="formRow">
+            <pre>data-style="rounded" data-label="none"</pre>
+            <div class="js-switch radio" data-style="rounded" data-label="none">
+              <input type="radio" id="rb-1" name="rb-group-1">
+              <label class="label" for="rb-1"></label>
+            </div>
+            <div class="js-switch radio" data-style="rounded" data-label="none">
+              <input type="radio" id="rb-2" name="rb-group-1">
+              <label class="label" for="rb-2"></label>
+            </div>
+            <div class="js-switch radio" data-style="rounded" data-label="none">
+              <input type="radio" id="rb-3" name="rb-group-1">
+              <label class="label" for="rb-3"></label>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <pre>data-style="square" data-label="on-off"</pre>
+            <div class="js-switch radio" data-style="square" data-label="on-off">
+              <input type="radio" id="rb-4" name="rb-group-2">
+              <label class="label" for="rb-4"></label>
+            </div>
+            <div class="js-switch radio" data-style="square" data-label="on-off">
+              <input type="radio" id="rb-5" name="rb-group-2">
+              <label class="label" for="rb-5"></label>
+            </div>
+            <div class="js-switch radio" data-style="square" data-label="on-off">
+              <input type="radio" id="rb-6" name="rb-group-2">
+              <label class="label" for="rb-6"></label>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <pre>data-style="rounded" (no labels buy default)</pre>
+            <div class="js-switch radio" data-style="slider" data-label="none">
+              <input type="radio" id="rb-7" name="rb-group-3">
+              <label class="label" for="rb-7"></label>
+            </div>
+            <div class="js-switch radio" data-style="slider" data-label="none">
+              <input type="radio" id="rb-8" name="rb-group-3">
+              <label class="label" for="rb-8"></label>
+            </div>
+            <div class="js-switch radio" data-style="slider" data-label="none">
+              <input type="radio" id="rb-9" name="rb-group-3">
+              <label class="label" for="rb-9"></label>
+            </div>
+          </div>
+        </div>
+
         <div id="preview">
           <h2>Switch Preview</h2>
           <div class="js-innerhtml">
@@ -39,15 +148,11 @@
               <label class="label" for="rb-demo-1"></label>
             </div>
           </div>
-          <h5>HTML</h5>
+          <p>HTML</p>
           <textarea class="js-codecopy" onclick="this.focus();this.select();" style="width: 100%; height:120px; box-sizing: border-box; resize: none;"></textarea>
-          <h5>LESS</h5>
+          <p>LESS</p>
           <textarea class="js-csscopy" onclick="this.focus();this.select();" style="width: 100%; height:120px; box-sizing: border-box; resize: none;"></textarea>
         </div>
-      </header>
-      
-      <section>
-
         
 
       </section>
@@ -64,59 +169,59 @@
     <script src="javascripts/scale.fix.js"></script>
 
     <script type="text/javascript">
-      $(document).ready(function() {
+    $(document).ready(function() {
 
-        var customSwitches = function() {
-          this.element = 'checkbox';
-          this.type = 'rounded';
-          this.label = 'none';
+      var customSwitches = function() {
+        this.element = 'checkbox';
+        this.type = 'rounded';
+        this.label = 'none';
+      };
+
+      window.onload = function() {
+
+        var customSwitch = new customSwitches();
+        var gui = new dat.GUI();
+
+        gui.add(customSwitch, 'element', ['checkbox','radio'] );
+        gui.add(customSwitch, 'type', ['rounded','square','slider'] );
+        gui.add(customSwitch, 'label', ['none','yes-no','on-off','O-I'] );
+
+        var update = function() {
+
+          var sw = $('#preview .js-switch');
+          var swEL = sw[0];
+          var swInput = sw.find('input');
+          var swBtn = sw.find('.label');
+
+          if(sw.hasClass('radio') || sw.hasClass('checkbox')) {
+            sw.removeClass('checkbox radio');
+            sw.addClass(customSwitch.element);
+            swInput.attr('type', customSwitch.element);
+          }
+
+          if(sw.hasClass('checkbox')) {
+            swInput.removeAttr('name').attr('id', 'cb-demo');
+            swBtn.attr('for', 'cb-demo');
+          } else {
+            swInput.attr('name', 'rb-group').attr('id', 'rb-demo');
+            swBtn.attr('for', 'rb-demo');
+          }
+
+          sw.attr('data-style', customSwitch.type);
+          sw.attr('data-label', customSwitch.label);
+
+          var codeDiv = $(".js-codecopy")[0];
+          var switchHTML = $(".js-innerhtml")[0];
+          var code = switchHTML.innerHTML;
+
+          codeDiv.value = code;
+          console.log(switchHTML.innerHTML);
         };
 
-        window.onload = function() {
-          
-          var customSwitch = new customSwitches();
-          var gui = new dat.GUI();
+        setInterval( update, 500 );
+      };
+    });
+</script>
 
-          gui.add(customSwitch, 'element', ['checkbox','radio'] );
-          gui.add(customSwitch, 'type', ['rounded','square','slider'] );
-          gui.add(customSwitch, 'label', ['none','yes-no','on-off','O-I'] );
-          
-          var update = function() {
-            
-            var sw = $('#preview .js-switch');
-            var swEL = sw[0];
-            var swInput = sw.find('input');
-            var swBtn = sw.find('.label');
-            
-            if(sw.hasClass('radio') || sw.hasClass('checkbox')) {
-              sw.removeClass('checkbox radio');
-              sw.addClass(customSwitch.element);
-              swInput.attr('type', customSwitch.element);
-            }
-            
-            if(sw.hasClass('checkbox')) {
-              swInput.removeAttr('name').attr('id', 'cb-demo');
-              swBtn.attr('for', 'cb-demo');
-            } else {
-              swInput.attr('name', 'rb-group').attr('id', 'rb-demo');
-              swBtn.attr('for', 'rb-demo');
-            }
-            
-            sw.attr('data-style', customSwitch.type);
-            sw.attr('data-label', customSwitch.label);
-            
-            var codeDiv = $(".js-codecopy")[0];
-            var switchHTML = $(".js-innerhtml")[0];
-            var code = switchHTML.innerHTML;
-
-            codeDiv.value = code;
-            console.log(switchHTML.innerHTML);
-          };
-
-          setInterval( update, 500 );
-        };
-      });
-    </script>
-
-  </body>
+</body>
 </html>
