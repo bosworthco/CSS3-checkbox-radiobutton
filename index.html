@@ -182,7 +182,7 @@
 
         var gui = new dat.GUI({ autoPlace: false });
         var customContainer = $('#controller');
-        customContainer.appendChild(gui.domElement)
+        customContainer.append(gui.domElement);
 
         gui.add(customSwitch, 'element', ['checkbox','radio'] );
         gui.add(customSwitch, 'type', ['rounded','square','slider'] );
