@@ -7,8 +7,20 @@ body {
   font-weight:300;
 }
 
+#controller {
+  margin-bottom: 20px;
+}
+
 #controller .hue-field {
   width: 13px!important;
+}
+
+#controller .close-button {
+  display: none!important;
+}
+
+#controller .dg.main {
+  width: 100%!important;
 }
 
 .formRow {
@@ -34,8 +46,13 @@ pre,
 }
 
 .js-innerhtml {
+  display: none;
+}
+
+.js-preview {
   margin-bottom: 20px;
 }
+
 .js-codecopy,
 .js-csscopy {
   margin-bottom: 20px;
