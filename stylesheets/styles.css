@@ -8,7 +8,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
   margin:0 0 20px;
 }
 
@@ -22,14 +21,6 @@ h1, h2, h3 {
 
 h1 {
   font-size:28px;
-}
-
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
 }
 
 a {
@@ -162,7 +153,9 @@ header ul a strong {
 section {
   width:500px;
   float:right;
-  padding-bottom:50px;
+  padding:20px;
+  background: #1D1E19;
+  color: #FFFFFF;
 }
 
 small {
