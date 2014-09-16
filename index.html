@@ -137,14 +137,6 @@
         <div id="preview">
           <h2>Switch Generator</h2>
           <div id="controller"></div>
-
-<div class="js-preview">
-<div class="js-switch radio" data-style="slider" data-label="none">
-  <input type="radio" id="rb-demo-1" name="rb-group">
-  <label class="label" for="rb-demo-1"></label>
-</div>
-</div>
-
 <div class="js-innerhtml">
 <div class="js-switch radio" data-style="slider" data-label="none">
   <input type="radio" id="rb-demo-1" name="rb-group">
@@ -156,7 +148,7 @@
           </div>
           <textarea class="js-codecopy" onclick="this.focus();this.select();" style="width: 100%; height:120px; box-sizing: border-box; resize: none;"></textarea>
           <div class="instruction">
-            <strong>LESS</strong><br />Copy this code and paste it into a new file called <pre style="display: inline;"><code>colors.less</code></pre> and save it into the <pre style="display: inline;"><code>../css</code></pre> folder.
+            <strong>LESS</strong><br />Copy this code and paste it into a new file called <pre style="display: inline;"><code>colors.less</code></pre> and save it into the <pre style="display: inline;"><code>../css</code></pre> folder and update the HEX values as you like.
           </div>
           <textarea class="js-csscopy" onclick="this.focus();this.select();" style="width: 100%; height:120px; box-sizing: border-box; resize: none;"></textarea>
         </div>
@@ -182,11 +174,6 @@
         this.element = 'checkbox';
         this.type = 'rounded';
         this.label = 'none';
-        this.background = '#DEDEDE';
-        this.inactiveBG = '#555555';
-        this.inactiveBorder = '#454545';
-        this.activeBG = '#2D964A';
-        this.activeBorder = '#268238';
       };
 
       window.onload = function() {
@@ -216,13 +203,6 @@
           var swInput = sw.find('input');
           var swBtn = sw.find('.label');
 
-
-          var c_sw = $('#preview .js-preview .js-switch');
-          var c_swEL = c_sw[0];
-          var c_swInput = c_sw.find('input');
-          var c_swBtn = c_sw.find('.label');
-
-
           var LESSvars = "";
           LESSvars+="@switch_bg:"+customSwitch.background;
           LESSvars+="\r@inactive_color:"+customSwitch.inactiveBG;
@@ -230,49 +210,22 @@
           LESSvars+="\r@active_color:"+customSwitch.activeBG;
           LESSvars+="\r@active_border:"+customSwitch.activeBorder;
 
-
           if(sw.hasClass('radio') || sw.hasClass('checkbox')) {
             sw.removeClass('checkbox radio');
             sw.addClass(customSwitch.element);
             swInput.attr('type', customSwitch.element);
-
-            c_sw.removeClass('checkbox radio');
-            c_sw.addClass(customSwitch.element);
-            c_swInput.attr('type', customSwitch.element);
           }
-
 
           if(sw.hasClass('checkbox')) {
             swInput.removeAttr('name').attr('id', 'cb-demo');
             swBtn.attr('for', 'cb-demo');
-
-            c_swInput.removeAttr('name').attr('id', 'cb-demo');
-            c_swBtn.attr('for', 'cb-demo');
           } else {
             swInput.attr('name', 'rb-group').attr('id', 'rb-demo');
             swBtn.attr('for', 'rb-demo');
-
-            c_swInput.attr('name', 'rb-group').attr('id', 'rb-demo');
-            c_swBtn.attr('for', 'rb-demo');
           }
-
 
           sw.attr('data-style', customSwitch.type);
           sw.attr('data-label', customSwitch.label);
-
-          c_sw.attr('data-style', customSwitch.type);
-          c_sw.attr('data-label', customSwitch.label);
-
-          c_swEL.style.background=customSwitch.background;
-          //swLabelActive[0].style.color=customSwitch.activeBG;
-    
-          if(c_swInput.prop('checked') == true) {
-            c_swBtn[0].style.background=customSwitch.activeBG;
-            c_swBtn[0].style.borderColor=customSwitch.activeBorder;
-          } else {
-            c_swBtn[0].style.background=customSwitch.inactiveBG;
-            c_swBtn[0].style.borderColor=customSwitch.inactiveBorder;
-          }
 
           var codeDiv = $(".js-codecopy")[0];
           var switchHTML = $(".js-innerhtml")[0];
